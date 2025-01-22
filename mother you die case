@@ -1,0 +1,17 @@
+bool containsDuplicate(int* nums, int numsSize) {
+    int fn=numsSize-1,n=0,c=0;
+    while(1)
+    {
+        if(n==numsSize-1)break;
+        if(nums[fn]==nums[n])
+        {
+            if(n==fn)break;
+            c++;break;}
+        else {
+            if(n==fn-1)break;
+            fn--;n++;
+        }
+    }
+    if(c==0)return false;
+    else return true;
+}
